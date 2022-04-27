@@ -5,7 +5,13 @@
   "main": "index.js",
   "scripts": {
     "callback": "node src/callback/index.js",
-    "callback:challenge": "node src/callback/challenge.js"
+    "callback:challenge": "node src/callback/challenge.js",
+    "personajes": "node src/starwars/personajes.js",
+    "peliculas": "node src/starwars/peliculas.js",
+    "naves": "node src/starwars/naves.js",
+    "especies": "node src/starwars/especies.js",
+    "planetas": "node src/starwars/planetas.js",
+    "vehiculos": "node src/starwars/vehiculos.js"
   },
   "author": "",
   "license": "ISC",
