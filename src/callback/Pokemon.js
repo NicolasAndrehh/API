@@ -1,5 +1,5 @@
 // let XMLHttpRequest = require('xmlhttprequest').XMLHttpRequest;
-let API = "https://rickandmortyapi.com/api/character/";
+let API = "https://pokeapi.co/api/v2/pokemon";
 
 // let tabla = document.getElementById('tabla');
 // let idInput = document.getElementById('id');
@@ -35,22 +35,22 @@ for (let i = 0; i < 5; i++) {
     fetchData(API, function(error1, data1){
         if(error1) return console.log(error1);
     
-        fetchData(API + data1.results[i].id, function(error2, data2){
+        fetchData(API + data1.results[i].url, function(error2, data2){
             if(error2) return console.log(error2);
             
-            fetchData(data2.origin.url, function(error3, data3){
+            fetchData(data2.name, function(error3, data3){
                 if(error3) return console.log(error3);
                 
                 // let infoCount = (data1.info.count);
-                let id = (data2.id);
-                let nombre = (data2.name);
-                let estado = (data2.status);
-                let especie = (data2.species);
-                let genero = (data2.gender);
-                let dimension = (data3.dimension);
+                // let id = (data2.id);
+                // let nombre = (data2.name);
+                // let estado = (data2.status);
+                // let especie = (data2.species);
+                // let genero = (data2.gender);
+                // let dimension = (data3.dimension);
 
 
-                tabla.innerHTML += `<tr><td>${id}</td><td>${nombre}</td><td>${estado}</td><td>${especie}</td><td>${genero}</td><td>${dimension}</td></tr>`
+                // tabla.innerHTML += `<tr><td>${id}</td><td>${nombre}</td><td>${estado}</td><td>${especie}</td><td>${genero}</td><td>${dimension}</td></tr>`
     
                 // idInput.innerText = id;
                 // nombreInput.innerText = nombre;
@@ -59,9 +59,9 @@ for (let i = 0; i < 5; i++) {
                 // generoInput.innerText = genero;
                 // dimensionInput.innerText = dimension;
     
-                console.log(API);
-                console.log(API + data1.results[0].id);
-                console.log(data2.origin.url);
+                // console.log(API);
+                // console.log(API + data1.results[0].url);
+                // console.log(data2.origin.url);
             })
         })
     })
